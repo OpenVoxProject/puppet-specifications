@@ -6,7 +6,7 @@ EPP is to the Puppet Programming Language what ERB is to Ruby, and EPP supports 
 
 EPP is used via two functions supplied with puppet (`epp` and `inline_epp`). This specification does not limit the set of functions that may provide different ways of invoking or using the EPP template features.
 
-### EPP Functions
+## EPP Functions
 
 EPP template text is processed by the two epp functions:
 
@@ -15,7 +15,7 @@ EPP template text is processed by the two epp functions:
 
 When EPP-text is evaluated the result is a String.
 
-#### Visibility of Scoped Variables
+### Visibility of Scoped Variables
 
 In order to encourage template reuse and foster good best practices regarding separation of
 concerns, the scoping rules of the EPP functions are as follows:
@@ -33,11 +33,11 @@ concerns, the scoping rules of the EPP functions are as follows:
 In other words, an external (non-inline) template behaves as a function, and an inline
 template behaves as a lambda or as a function depending on if it has defined parameters, or is given variables in a hash.
 
-#### inline_epp function
+### inline_epp function
 
 The `inline_epp` function is given a String containing the EPP source text. The function optionally takes a Hash of variable name to value mappings. 
 
-#### epp function
+### epp function
 
 The `epp` function processes EPP source text in a file (the template file).
 The first argument to this function should be the file to to take the EPP source text
@@ -52,7 +52,7 @@ For an absolute path, the path is used as given if the file exists. If the absol
 
 It is an error if the referenced template file does not exist.
 
-### EPP Template Text
+## EPP Template Text
 
 An EPP lexical text processor (epp-lexer) starts in 'text mode', and delivers a token stream to the EPP parser. In addition to the token delivered for the Puppet Programming Language source text,
 the epp-lexer also delivers the following tokens:
