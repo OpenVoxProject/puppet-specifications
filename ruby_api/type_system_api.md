@@ -1,4 +1,4 @@
-Plugin API
+Type System Plugin API
 ===
 W.I.P
 
